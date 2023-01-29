@@ -1,0 +1,13 @@
+<php>
+$start_time = strtotime("8:00 AM");
+$end_time = strtotime("8:00 PM");
+$interval = 30 * 60; // 30 minutos en segundos
+
+$time_list = array();
+
+for ($i = $start_time; $i <= $end_time; $i += $interval) {
+    $time_list[] = date("g:i A", $i);
+}
+
+print_r($time_list);
+</php>
